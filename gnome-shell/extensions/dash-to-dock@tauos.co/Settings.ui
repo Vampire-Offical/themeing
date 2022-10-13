@@ -1,0 +1,1027 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <requires lib="adw" version="1.0"/>
+  <object class="GtkAdjustment" id="animation_time_adjustment">
+    <property name="upper">1</property>
+    <property name="step-increment">0.05</property>
+    <property name="page-increment">0.25</property>
+  </object>
+  <object class="GtkBox" id="box_middle_click_options">
+    <property name="can_focus">1</property>
+    <property name="margin_start">12</property>
+    <property name="margin_end">12</property>
+    <property name="margin_top">12</property>
+    <property name="margin_bottom">12</property>
+    <property name="orientation">vertical</property>
+    <child>
+      <object class="AdwPreferencesGroup" id="frame_middle_click_options">
+        <property name="can_focus">0</property>
+        <child>
+          <object class="AdwActionRow">
+            <property name="title" translatable="yes">Shift+Click Action</property>
+            <property name="subtitle" translatable="yes">If set to Minimize window, double clicking minimizes all windows of one app.</property>
+            <child type="suffix">
+              <object class="GtkComboBoxText" id="shift_click_action_combo">
+                <property name="can_focus">0</property>
+                <property name="valign">center</property>
+                <items>
+                  <item translatable="yes">Raise window</item>
+                  <item translatable="yes">Minimize window</item>
+                  <item translatable="yes">Launch new instance</item>
+                  <item translatable="yes">Cycle through windows</item>
+                  <item translatable="yes">Minimize or overview</item>
+                  <item translatable="yes">Show window previews</item>
+                  <item translatable="yes">Minimize or show previews</item>
+                  <item translatable="yes">Focus or show previews</item>
+                  <item translatable="yes">Focus, minimize or show previews</item>
+                  <item translatable="yes">Quit</item>
+                </items>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="AdwActionRow">
+            <property name="title" translatable="yes">Middle-Click Action</property>
+            <property name="subtitle" translatable="yes">Behavior for Middle-Click.</property>
+            <child type="suffix">
+              <object class="GtkComboBoxText" id="middle_click_action_combo">
+                <property name="can_focus">0</property>
+                <property name="valign">center</property>
+                <items>
+                  <item translatable="yes">Raise window</item>
+                  <item translatable="yes">Minimize window</item>
+                  <item translatable="yes">Launch new instance</item>
+                  <item translatable="yes">Cycle through windows</item>
+                  <item translatable="yes">Minimize or overview</item>
+                  <item translatable="yes">Show window previews</item>
+                  <item translatable="yes">Minimize or show previews</item>
+                  <item translatable="yes">Focus or show previews</item>
+                  <item translatable="yes">Focus, minimize or show previews</item>
+                  <item translatable="yes">Quit</item>
+                </items>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="AdwActionRow">
+            <property name="title" translatable="yes">Shift+Middle-Click Action</property>
+            <property name="subtitle" translatable="yes">Behavior for Shift+Middle-Click.</property>
+            <child type="suffix">
+              <object class="GtkComboBoxText" id="shift_middle_click_action_combo">
+                <property name="can_focus">0</property>
+                <property name="valign">center</property>
+                <items>
+                  <item translatable="yes">Raise window</item>
+                  <item translatable="yes">Minimize window</item>
+                  <item translatable="yes">Launch new instance</item>
+                  <item translatable="yes">Cycle through windows</item>
+                  <item translatable="yes">Minimize or overview</item>
+                  <item translatable="yes">Show window previews</item>
+                  <item translatable="yes">Minimize or show previews</item>
+                  <item translatable="yes">Focus or show previews</item>
+                  <item translatable="yes">Focus, minimize or show previews</item>
+                  <item translatable="yes">Quit</item>
+                </items>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkAdjustment" id="custom_opacity_adjustement">
+    <property name="upper">1</property>
+    <property name="step-increment">0.01</property>
+    <property name="page-increment">0.10</property>
+  </object>
+  <object class="GtkAdjustment" id="dock_size_adjustment">
+    <property name="lower">0.33</property>
+    <property name="upper">1</property>
+    <property name="step-increment">0.01</property>
+    <property name="page-increment">0.10</property>
+  </object>
+  <object class="GtkAdjustment" id="dot_border_width_adjustment">
+    <property name="upper">10</property>
+    <property name="step-increment">1</property>
+    <property name="page-increment">5</property>
+  </object>
+  <object class="GtkBox" id="running_dots_advance_settings_box">
+    <property name="hexpand">1</property>
+    <property name="vexpand">1</property>
+    <property name="can_focus">0</property>
+    <property name="margin_start">12</property>
+    <property name="margin_end">12</property>
+    <property name="margin_top">12</property>
+    <property name="margin_bottom">12</property>
+    <property name="orientation">vertical</property>
+    <child>
+      <object class="AdwPreferencesGroup" id="frame1">
+        <property name="can_focus">0</property>
+        <child>
+          <object class="AdwActionRow" id="dot_style_box">
+            <property name="can_focus">0</property>
+            <property name="title" translatable="yes">Enable Unity 7-like Backlit Items</property>
+            <child>
+              <object class="GtkBox">
+                <property name="can_focus">0</property>
+                <property name="spacing">12</property>
+                <child>
+                  <object class="GtkSwitch" id="unity_backlit_items_switch">
+                    <property name="valign">center</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkCheckButton" id="apply_gloss_effect_checkbutton">
+                    <property name="label" translatable="yes">Glossy</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="AdwActionRow">
+            <property name="can_focus">0</property>
+            <property name="title" translatable="yes">Use Dominant Color</property>
+            <child>
+              <object class="GtkSwitch" id="dominant_color_switch">
+                <property name="valign">center</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="AdwExpanderRow" id="grid1">
+            <property name="can_focus">0</property>
+            <property name="title" translatable="yes">Customize Indicator Style</property>
+            <property name="expanded" bind-source="dot_style_switch" bind-property="active" bind-flags="sync-create|bidirectional"/>
+            <child type="action">
+              <object class="GtkSwitch" id="dot_style_switch">
+                <property name="valign">center</property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwActionRow" id="dot_color_box">
+                <property name="can_focus">0</property>
+                <property name="title" translatable="yes">Fill Color</property>
+                <child>
+                  <object class="GtkColorButton" id="dot_color_colorbutton">
+                    <property name="valign">center</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="AdwActionRow" id="border_color_box">
+                <property name="can_focus">0</property>
+                <property name="title" translatable="yes">Border Color</property>
+                <child>
+                  <object class="GtkColorButton" id="dot_border_color_colorbutton">
+                    <property name="valign">center</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="AdwActionRow" id="box_boder_width_box">
+                <property name="can_focus">0</property>
+                <property name="title" translatable="yes">Border Width</property>
+                <child>
+                  <object class="GtkSpinButton" id="dot_border_width_spin_button">
+                    <property name="adjustment">dot_border_width_adjustment</property>
+                    <property name="valign">center</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkAdjustment" id="hide_timeout_adjustment">
+    <property name="upper">1</property>
+    <property name="step-increment">0.05</property>
+    <property name="page-increment">0.25</property>
+  </object>
+  <object class="GtkAdjustment" id="icon_size_adjustment">
+    <property name="lower">16</property>
+    <property name="upper">128</property>
+    <property name="step-increment">1</property>
+    <property name="page-increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="preview_size_adjustment">
+    <property name="lower">0.0</property>
+    <property name="upper">1</property>
+    <property name="step_increment">0.01</property>
+    <property name="page_increment">0.1</property>
+  </object>
+  <object class="AdwPreferencesPage" id="settings_dock">
+    <property name="title" translatable="yes">Apps</property>
+    <property name="icon-name">application-x-object-symbolic</property>
+    <child>
+      <object class="AdwPreferencesGroup" id="customize_theme1">
+        <property name="can_focus">0</property>
+        <child>
+          <object class="GtkListBox" id="listbox9">
+            <property name="can_focus">0</property>
+            <property name="selection_mode">none</property>
+            <style>
+              <class name="boxed-list"/>
+            </style>
+            <child>
+              <object class="AdwActionRow">
+                <property name="title" translatable="yes">Show Favorites</property>
+                <child>
+                  <object class="GtkSwitch" id="show_favorite_switch">
+                    <property name="halign">end</property>
+                    <property name="valign">center</property>
+                    <layout>
+                      <property name="column">1</property>
+                      <property name="row">0</property>
+                    </layout>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="AdwExpanderRow">
+                <property name="title" translatable="yes">Show Running Apps</property>
+                <property name="expanded" bind-source="show_running_switch" bind-property="active" bind-flags="sync-create|bidirectional"/>
+                <child type="action">
+                  <object class="GtkSwitch" id="show_running_switch">
+                    <property name="valign">center</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="AdwActionRow">
+                    <property name="title" translatable="yes">Isolate Workspaces</property>
+                    <child type="suffix">
+                      <object class="GtkSwitch" id="application_button_isolation_button">
+                        <property name="valign">center</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="AdwActionRow">
+                    <property name="title" translatable="yes">Isolate Monitors</property>
+                    <child type="suffix">
+                      <object class="GtkSwitch" id="application_button_monitor_isolation_button">
+                        <property name="valign">center</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="AdwActionRow">
+                    <property name="title" translatable="yes">Show Urgent Windows</property>
+                    <child type="suffix">
+                      <object class="GtkSwitch" id="application_button_urgent_button">
+                        <property name="valign">center</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="AdwActionRow">
+                    <property name="title" translatable="yes">Show Window Previews</property>
+                    <child type="suffix">
+                      <object class="GtkSwitch" id="windows_preview_button">
+                        <property name="valign">center</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="AdwActionRow">
+                <property name="title" translatable="yes">Focused Apps Always Visible</property>
+                <child type="suffix">
+                  <object class="GtkSwitch" id="scroll_to_icon_switch">
+                    <property name="valign">center</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="AdwExpanderRow">
+                <property name="title" translatable="yes">Show &lt;i&gt;Apps&lt;/i&gt; Icon</property>
+                <property name="subtitle" translatable="yes">If disabled, these settings are accessible from gnome-tweak-tool.</property>
+                <property name="expanded" bind-source="show_applications_button_switch" bind-property="active" bind-flags="sync-create|bidirectional"/>
+                <child type="action">
+                  <object class="GtkSwitch" id="show_applications_button_switch">
+                    <property name="valign">center</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="AdwActionRow">
+                    <property name="title" translatable="yes">Move Apps Icon As First Icon</property>
+                    <child type="suffix">
+                      <object class="GtkSwitch" id="application_button_first_button">
+                        <property name="valign">center</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="AdwActionRow">
+                    <property name="title" translatable="yes">Animate Opening Apps Grid</property>
+                    <child type="suffix">
+                      <object class="GtkSwitch" id="application_button_animation_button">
+                        <property name="valign">center</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="AdwActionRow">
+                <property name="title" translatable="yes">Show Trash Icon</property>
+                <child>
+                  <object class="GtkSwitch" id="show_trash_switch">
+                    <property name="valign">center</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="AdwExpanderRow">
+                <property name="title" translatable="yes">Show Devices</property>
+                <property name="expanded" bind-source="show_mounts_switch" bind-property="active" bind-flags="sync-create|bidirectional"/>
+                <child type="action">
+                  <object class="GtkSwitch" id="show_mounts_switch">
+                    <property name="valign">center</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="AdwActionRow">
+                    <property name="title" translatable="yes">Mounted Only</property>
+                    <child type="suffix">
+                      <object class="GtkSwitch" id="show_only_mounted_devices_check">
+                        <property name="valign">center</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="AdwActionRow">
+                    <property name="title" translatable="yes">Include Network Devices</property>
+                    <child type="suffix">
+                      <object class="GtkSwitch" id="show_network_volumes_check">
+                        <property name="valign">center</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="AdwActionRow">
+                    <property name="title" translatable="yes">Isolate Windows From File Manager</property>
+                    <child type="suffix">
+                      <object class="GtkSwitch" id="isolate_locations_switch">
+                        <property name="valign">center</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="AdwPreferencesPage" id="settings_behaviour">
+    <property name="title" translatable="yes">Behaviour</property>
+    <property name="icon-name">applications-science-symbolic</property>
+    <child>
+      <object class="AdwPreferencesGroup" id="dock_display">
+        <property name="can_focus">0</property>
+        <child>
+          <object class="AdwActionRow" id="dock_monitor_listboxrow">
+            <property name="title" translatable="yes">Show Dock On</property>
+            <child type="suffix">
+              <object class="GtkBox" id="dock_monitor_grid">
+                <property name="can_focus">0</property>
+                <property name="orientation">vertical</property>
+                <property name="margin_top">6</property>
+                <property name="margin_bottom">6</property>
+                <child>
+                  <object class="GtkComboBoxText" id="dock_monitor_combo">
+                    <property name="can_focus">0</property>
+                    <property name="valign">center</property>
+                    <signal name="changed" handler="dock_display_combo_changed_cb"/>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkCheckButton" id="multi_monitor_button">
+                    <property name="label" translatable="yes">All Monitors</property>
+                    <property name="valign">center</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="AdwPreferencesGroup" id="size_frame">
+        <property name="can_focus">0</property>
+        <child>
+          <object class="GtkListBox" id="size_listbox">
+            <property name="can_focus">0</property>
+            <property name="selection_mode">none</property>
+            <style>
+              <class name="boxed-list"/>
+            </style>
+            <child>
+              <object class="AdwActionRow" id="preview_size_listboxrow">
+                <property name="can_focus">True</property>
+                <property name="title" translatable="yes">Window Preview Size Scale</property>
+                <child type="suffix">
+                  <object class="GtkBox" id="preview_size_grid">
+                    <property name="can_focus">False</property>
+                    <property name="spacing">6</property>
+                    <child>
+                      <object class="GtkScale" id="preview_size_scale">
+                        <property name="hexpand">1</property>
+                        <property name="draw-value">1</property>
+                        <property name="adjustment">preview_size_adjustment</property>
+                        <property name="restrict_to_fill_level">0</property>
+                        <property name="fill_level">0</property>
+                        <property name="round_digits">0</property>
+                        <property name="digits">2</property>
+                        <property name="value_pos">right</property>
+                        <signal name="value-changed" handler="preview_size_scale_value_changed_cb"/>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="AdwPreferencesGroup" id="hot_keys_frame">
+        <property name="can_focus">0</property>
+        <child>
+          <object class="AdwActionRow" id="hot_keys_listboxrow">
+            <property name="title" translatable="yes">Keyboard Shortcuts To Activate Apps</property>
+            <property name="subtitle" translatable="yes">Enable Super+(0-9) to activate apps. Shift and Ctrl also can be used.</property>
+            <child type="suffix">
+              <object class="GtkBox" id="hot_keys_grid">
+                <property name="can_focus">0</property>
+                <property name="spacing">12</property>
+                <child>
+                  <object class="GtkButton" id="overlay_button">
+                    <property name="receives_default">1</property>
+                    <property name="halign">center</property>
+                    <property name="valign">center</property>
+                    <child>
+                      <object class="GtkImage" id="image_overlay">
+                        <property name="can_focus">0</property>
+                        <property name="icon_name">emblem-system-symbolic</property>
+                      </object>
+                    </child>
+                    <style>
+                      <class name="circular"/>
+                    </style>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkSwitch" id="hot_keys_switch">
+                    <property name="halign">end</property>
+                    <property name="valign">center</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="AdwPreferencesGroup" id="built_in_theme_frame3">
+        <property name="can_focus">0</property>
+        <child>
+          <object class="AdwActionRow">
+            <property name="title" translatable="yes">Click Action</property>
+            <property name="subtitle" translatable="yes">Behaviour when clicking on a running app icon.</property>
+            <child type="suffix">
+              <object class="GtkBox" id="buitin_theme5">
+                <property name="can_focus">0</property>
+                <property name="spacing">12</property>
+                <child>
+                  <object class="GtkButton" id="middle_click_options_button">
+                    <property name="receives_default">1</property>
+                    <property name="valign">center</property>
+                    <child>
+                      <object class="GtkImage" id="middle_click_image">
+                        <property name="can_focus">0</property>
+                        <property name="icon_name">emblem-system-symbolic</property>
+                      </object>
+                    </child>
+                    <style>
+                      <class name="circular"/>
+                    </style>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkComboBoxText" id="click_action_combo">
+                    <property name="can_focus">0</property>
+                    <property name="valign">center</property>
+                    <items>
+                      <item translatable="yes">Raise window</item>
+                      <item translatable="yes">Minimize</item>
+                      <item translatable="yes">Launch new instance</item>
+                      <item translatable="yes">Cycle through windows</item>
+                      <item translatable="yes">Minimize or overview</item>
+                      <item translatable="yes">Show window previews</item>
+                      <item translatable="yes">Minimize or show previews</item>
+                      <item translatable="yes">Focus or show previews</item>
+                      <item translatable="yes">Focus, minimize or show previews</item>
+                    </items>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="AdwPreferencesGroup" id="built_in_theme_frame_scroll">
+        <property name="can_focus">0</property>
+        <child>
+          <object class="AdwActionRow">
+            <property name="title" translatable="yes">Scroll Action</property>
+            <property name="subtitle" translatable="yes">Behaviour when scrolling on an app icon.</property>
+            <child type="suffix">
+              <object class="GtkComboBoxText" id="scroll_action_combo">
+                <property name="can_focus">0</property>
+                <property name="valign">center</property>
+                <items>
+                  <item translatable="yes">Do nothing</item>
+                  <item translatable="yes">Cycle through windows</item>
+                  <item translatable="yes">Switch workspace</item>
+                </items>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="AdwPreferencesPage" id="settings_appearance">
+    <property name="title" translatable="yes">Appearance</property>
+    <property name="icon-name">preferences-desktop-appearance-symbolic</property>
+    <child>
+      <object class="AdwPreferencesGroup" id="built_in_theme_frame">
+        <property name="can_focus">0</property>
+        <child>
+          <object class="AdwActionRow">
+            <property name="title" translatable="yes">Built-in Theme</property>
+            <property name="subtitle" translatable="yes">Integrates the dock with the default GNOME theme.</property>
+            <child type="suffix">
+              <object class="GtkSwitch" id="builtin_theme_switch">
+                <property name="valign">center</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="AdwPreferencesGroup" id="customize_theme">
+        <property name="can_focus">0</property>
+        <child>
+          <object class="GtkListBox" id="listbox2">
+            <property name="can_focus">0</property>
+            <property name="selection_mode">none</property>
+            <style>
+              <class name="boxed-list"/>
+            </style>
+            <child>
+              <object class="AdwActionRow">
+                <property name="title" translatable="yes">Shrink Dock</property>
+                <property name="subtitle" translatable="yes">Save space reducing padding and border radius.</property>
+                <child type="suffix">
+                  <object class="GtkSwitch" id="shrink_dash_switch">
+                    <property name="valign">center</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="AdwActionRow">
+                <property name="title" translatable="yes">Customize Indicators</property>
+                <child type="suffix">
+                  <object class="GtkBox" id="box4">
+                    <property name="can_focus">0</property>
+                    <property name="spacing">6</property>
+                    <child>
+                      <object class="GtkButton" id="running_indicators_advance_settings_button">
+                        <property name="valign">center</property>
+                        <property name="icon_name">emblem-system-symbolic</property>
+                        <style>
+                          <class name="circular"/>
+                        </style>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkComboBoxText" id="running_indicators_combo">
+                        <property name="can_focus">0</property>
+                        <property name="valign">center</property>
+                        <items>
+                          <item translatable="yes">Default</item>
+                          <item translatable="yes">Dots</item>
+                          <item translatable="yes">Squares</item>
+                          <item translatable="yes">Dashes</item>
+                          <item translatable="yes">Segmented</item>
+                          <item translatable="yes">Solid</item>
+                          <item translatable="yes">Ciliora</item>
+                          <item translatable="yes">Metro</item>
+                        </items>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="AdwActionRow" id="custom_background_color_listboxrow">
+                <property name="title" translatable="yes">Dock Color</property>
+                <property name="subtitle" translatable="yes">Set the dock background color.</property>
+                <child type="suffix">
+                  <object class="GtkBox" id="custom_background_color_box">
+                    <property name="can_focus">0</property>
+                    <property name="spacing">12</property>
+                    <child>
+                      <object class="GtkColorButton" id="custom_background_color">
+                        <property name="valign">center</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSwitch" id="custom_background_color_switch">
+                        <property name="valign">center</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="AdwActionRow">
+                <property name="title" translatable="yes">Dock Opacity</property>
+                <property name="subtitle" translatable="yes">Set the dock background opacity.</property>
+                <child>
+                  <object class="GtkBox" id="customize_opacity_box">
+                    <property name="can_focus">0</property>
+                    <property name="spacing">6</property>
+                    <property name="margin-top">6</property>
+                    <property name="orientation">vertical</property>
+                    <property name="valign">center</property>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="spacing">12</property>
+                        <property name="halign">end</property>
+                        <child>
+                          <object class="GtkButton" id="dynamic_opacity_button">
+                            <property name="receives_default">1</property>
+                            <property name="valign">center</property>
+                            <child>
+                              <object class="GtkImage" id="dynamic_opacity_image">
+                                <property name="can_focus">0</property>
+                                <property name="icon_name">emblem-system-symbolic</property>
+                              </object>
+                            </child>
+                            <style>
+                              <class name="circular"/>
+                            </style>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkComboBoxText" id="customize_opacity_combo">
+                            <property name="can_focus">0</property>
+                            <property name="valign">center</property>
+                            <items>
+                              <item id="0" translatable="yes">Default</item>
+                              <item id="1" translatable="yes">Fixed</item>
+                              <item id="3" translatable="yes">Dynamic</item>
+                            </items>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="spacing">12</property>
+                        <child>
+                          <object class="GtkScale" id="custom_opacity_scale">
+                            <property name="hexpand">1</property>
+                            <property name="draw-value">1</property>
+                            <property name="adjustment">custom_opacity_adjustement</property>
+                            <property name="restrict_to_fill_level">0</property>
+                            <property name="fill_level">0</property>
+                            <property name="round_digits">0</property>
+                            <property name="digits">2</property>
+                            <property name="value_pos">left</property>
+                            <signal name="value-changed" handler="custom_opacity_scale_value_changed_cb"/>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="AdwActionRow">
+                <property name="title" translatable="yes">Squared Corners</property>
+                <child type="suffix">
+                  <object class="GtkSwitch" id="force_straight_corner_switch">
+                    <property name="valign">center</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="AdwActionRow">
+                <property name="title" translatable="yes">Show Overview On Logon</property>
+                <child type="suffix">
+                  <object class="GtkSwitch" id="show_overview_on_startup_switch">
+                    <property name="valign">center</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="AdwPreferencesPage" id="settings_about">
+    <property name="title" translatable="yes">About</property>
+    <property name="icon-name">help-about-symbolic</property>
+    <child>
+      <object class="GtkBox" id="box1">
+        <property name="can_focus">0</property>
+        <property name="spacing">12</property>
+        <property name="margin_start">110</property>
+        <property name="margin_end">110</property>
+        <property name="margin_top">12</property>
+        <property name="margin_bottom">12</property>
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="AdwStatusPage" id="status_page">
+            <property name="icon-name">./media/logo.svg</property>
+            <property name="title">Dash to Dock</property>
+            <property name="description" translatable="yes">Moves the dash out of the overview transforming it into a dock.</property>
+            <property name="vexpand">1</property>
+            <child>
+              <object class="GtkListBox" id="extension_author">
+                <style>
+                  <class name="boxed-list"/>
+                </style>
+                <child>
+                  <object class="AdwActionRow">
+                    <property name="title" translatable="yes">Version</property>
+                    <child type="suffix">
+                      <object class="GtkBox" id="box888">
+                        <property name="can_focus">0</property>
+                        <property name="valign">center</property>
+                        <property name="orientation">vertical</property>
+                        <child>
+                          <object class="GtkLabel" id="extension_version">
+                            <property name="can_focus">0</property>
+                            <property name="label">...</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="extension_version_mod">
+                            <property name="can_focus">0</property>
+                            <property name="label">Modified for tauOS</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="AdwActionRow">
+                    <property name="title" translatable="yes">Original Author</property>
+                    <child type="suffix">
+                      <object class="GtkBox" id="box666">
+                        <property name="can_focus">0</property>
+                        <property name="valign">center</property>
+                        <property name="orientation">vertical</property>
+                        <child>
+                          <object class="GtkLabel" id="extension_author_name">
+                            <property name="can_focus">0</property>
+                            <property name="use_markup">1</property>
+                            <property name="halign">end</property>
+                            <property name="label">Michele (&lt;a href="mailto:micxgx@gmail.com"&gt;micxgx@gmail.com&lt;/a&gt;)</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="AdwActionRow">
+                    <property name="title" translatable="yes">Authors</property>
+                    <child type="suffix">
+                      <object class="GtkBox" id="box0">
+                        <property name="can_focus">0</property>
+                        <property name="valign">center</property>
+                        <property name="orientation">vertical</property>
+                        <child>
+                          <object class="GtkLabel" id="extension_mod_name1">
+                            <property name="can_focus">0</property>
+                            <property name="use_markup">1</property>
+                            <property name="halign">end</property>
+                            <property name="label">Jamie Murphy (&lt;a href="mailto:jamie@fyralabs.com"&gt;jamie@fyralabs.com&lt;/a&gt;)</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="extension_mod_name2">
+                            <property name="can_focus">0</property>
+                            <property name="use_markup">1</property>
+                            <property name="halign">end</property>
+                            <property name="label">Lains (&lt;a href="mailto:lainsce@airmail.cc"&gt;lainsce@airmail.cc&lt;/a&gt;)</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="label1">
+            <property name="vexpand">1</property>
+            <property name="valign">end</property>
+            <property name="label" translatable="yes">&lt;span size="small"&gt;This program comes with ABSOLUTELY NO WARRANTY.
+See the &lt;a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.html"&gt;GNU General Public License, version 2 or later&lt;/a&gt; for details.&lt;/span&gt;</property>
+            <property name="use_markup">1</property>
+            <property name="justify">center</property>
+            <property name="wrap">1</property>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkAdjustment" id="max_opacity_adjustement">
+    <property name="upper">1</property>
+    <property name="step-increment">0.01</property>
+    <property name="page-increment">0.1</property>
+  </object>
+  <object class="GtkAdjustment" id="min_opacity_adjustement">
+    <property name="upper">1</property>
+    <property name="step-increment">0.01</property>
+    <property name="page-increment">0.1</property>
+  </object>
+  <object class="GtkBox" id="advanced_transparency_dialog">
+    <property name="hexpand">1</property>
+    <property name="vexpand">1</property>
+    <property name="can_focus">0</property>
+    <property name="margin_start">12</property>
+    <property name="margin_end">12</property>
+    <property name="margin_top">12</property>
+    <property name="margin_bottom">12</property>
+    <property name="orientation">vertical</property>
+    <child>
+      <object class="AdwPreferencesGroup" id="advanced_transparency_frame">
+        <property name="can_focus">0</property>
+        <child>
+          <object class="AdwExpanderRow" id="advanced_transparency_listboxrow">
+            <property name="title" translatable="yes">Customize Opacity</property>
+            <property name="expanded" bind-source="customize_alphas_switch" bind-property="active" bind-flags="sync-create|bidirectional"/>
+            <child type="action">
+              <object class="GtkSwitch" id="customize_alphas_switch">
+                <property name="valign">center</property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwActionRow" id="min_alpha_box">
+                <property name="title" translatable="yes">Minimum Opacity</property>
+                <property name="can_focus">0</property>
+                <property name="hexpand">1</property>
+                <child type="suffix">
+                  <object class="GtkScale" id="min_alpha_scale">
+                    <property name="hexpand">1</property>
+                    <property name="draw-value">1</property>
+                    <property name="adjustment">min_opacity_adjustement</property>
+                    <property name="restrict_to_fill_level">0</property>
+                    <property name="fill_level">0</property>
+                    <property name="round_digits">0</property>
+                    <property name="digits">2</property>
+                    <property name="value_pos">left</property>
+                    <signal name="value-changed" handler="min_opacity_scale_value_changed_cb"/>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="AdwActionRow" id="max_alpha_box">
+                <property name="title" translatable="yes">Maximum Opacity</property>
+                <child type="suffix">
+                  <object class="GtkScale" id="max_alpha_scale">
+                    <property name="hexpand">1</property>
+                    <property name="draw-value">1</property>
+                    <property name="adjustment">max_opacity_adjustement</property>
+                    <property name="restrict_to_fill_level">0</property>
+                    <property name="fill_level">0</property>
+                    <property name="round_digits">0</property>
+                    <property name="digits">2</property>
+                    <property name="value_pos">left</property>
+                    <signal name="value-changed" handler="max_opacity_scale_value_changed_cb"/>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkAdjustment" id="pressure_threshold_adjustment">
+    <property name="upper">1000</property>
+    <property name="step-increment">50</property>
+    <property name="page-increment">250</property>
+  </object>
+  <object class="GtkAdjustment" id="shortcut_time_adjustment">
+    <property name="upper">10</property>
+    <property name="step-increment">0.25</property>
+    <property name="page-increment">1</property>
+  </object>
+  <object class="GtkBox" id="box_overlay_shortcut">
+    <property name="hexpand">1</property>
+    <property name="vexpand">1</property>
+    <property name="margin_start">12</property>
+    <property name="margin_end">12</property>
+    <property name="margin_top">12</property>
+    <property name="margin_bottom">12</property>
+    <property name="orientation">vertical</property>
+    <child>
+      <object class="AdwPreferencesGroup" id="frame_overlay_show_dock">
+        <child>
+          <object class="AdwActionRow">
+            <property name="title" translatable="yes">Number Overlay</property>
+            <property name="subtitle" translatable="yes">Show the app numbers over the icons briefly, corresponding to the shortcut.</property>
+            <child type="suffix">
+              <object class="GtkSwitch" id="overlay_switch">
+                <property name="valign">center</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="AdwActionRow">
+            <property name="title" translatable="yes">Show Hidden Dock</property>
+            <property name="subtitle" translatable="yes">Show dock briefly when triggering the shortcut.</property>
+            <child>
+              <object class="GtkSwitch" id="show_dock_switch">
+                <property name="valign">center</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="AdwActionRow">
+            <property name="title" translatable="yes">Keyboard Shortcut</property>
+            <property name="subtitle" translatable="yes">Syntax: Shift, Ctrl, Alt, Super.</property>
+            <child type="suffix">
+              <object class="GtkEntry" id="shortcut_entry">
+                <property name="valign">center</property>
+                <property name="width_chars">12</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="AdwActionRow">
+            <property name="title" translatable="yes">Hide Timeout</property>
+            <child type="suffix">
+              <object class="GtkSpinButton" id="timeout_spinbutton">
+                <property name="valign">center</property>
+                <property name="adjustment">shortcut_time_adjustment</property>
+                <property name="digits">3</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

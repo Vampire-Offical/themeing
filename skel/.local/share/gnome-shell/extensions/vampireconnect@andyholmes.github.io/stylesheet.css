@@ -1,0 +1,122 @@
+
+/* Device Menu
+
+PopupMenu.PopupMenuSection.vampireconnect-device-section
+    PopupMenu.PopupMenuSection.vampireconnect-device-menu
+        PopupMenu.PopupSeparatorMenuItem
+            StLabel.vampireconnect-device-name
+            StBoxLayout.vampireconnect-device-battery
+        PopupMenu.PopupMenuSection
+            StBoxLayout.vampireconnect-list-box
+            StBoxLayout (Submenu Container)
+*/
+.vampireconnect-device-section {
+}
+
+/* Title Bar */
+.vampireconnect-device-name {
+    font-weight: bold;
+}
+
+.vampireconnect-device-menu .popup-separator-menu-item {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Battery Widget */
+.vampireconnect-device-battery {
+    spacing: 3px;
+}
+
+.vampireconnect-device-battery StLabel {
+    font-size: 0.75em;
+}
+
+.vampireconnect-device-battery StIcon {
+    icon-size: 16px;
+}
+
+/* Signal Strength Widget */
+.vampireconnect-device-signal-strength {
+    spacing: 3px;
+}
+
+.vampireconnect-device-signal-strength StLabel {
+    font-size: 0.75em;
+}
+
+.vampireconnect-device-signal-strength StIcon {
+    icon-size: 16px;
+}
+
+/* List Box */
+.vampireconnect-list-box {
+}
+
+
+/* Device Panel Indicator
+
+PanelMenu.Button.vampireconnect-device-indicator
+    PopupMenu.PopupMenu
+        PopupMenu.PopupMenuSection.vampireconnect-device-menu
+            PopupMenu.PopupSeparatorMenuItem
+                StLabel.vampireconnect-device-name
+                StBoxLayout.vampireconnect-device-battery
+            PopupMenu.PopupMenuSection
+                StBoxLayout.vampireconnect-icon-box
+                StBoxLayout (Submenu Container)
+ */
+.vampireconnect-device-indicator {
+    -st-icon-style: symbolic;
+}
+
+/* Icon Box */
+.vampireconnect-icon-box {
+    margin: 0em 2em 0.5em;
+    spacing: 6px;
+}
+
+.vampireconnect-icon-button {
+    border-radius: 1em;
+    padding: 0.5em;
+}
+
+.vampireconnect-icon-button:hover, .vampireconnect-icon-button:focus {
+    background-color: rgba(255, 255, 255, 0.125);
+}
+
+.vampireconnect-icon-button StIcon {
+    icon-size: 1em;
+}
+
+
+/* Tooltip
+
+StBin.vampireconnect-tooltip (inherits from .osd-window)
+    StBoxLayout || [ Custom ClutterActor ]
+        StIcon
+        StLabel
+*/
+.vampireconnect-tooltip {
+    border-radius: 3px;
+    min-width: 0;
+    min-height: 0;
+    padding: 6px;
+}
+
+.vampireconnect-tooltip > StBoxLayout {
+    spacing: 6px;
+}
+
+.vampireconnect-tooltip StIcon {
+    icon-size: 16px;
+}
+
+.vampireconnect-tooltip StLabel {
+    font-weight: normal;
+    text-align: left;
+}
+
+.vampireconnect-tooltip StLabel:rtl {
+    text-align: right;
+}
