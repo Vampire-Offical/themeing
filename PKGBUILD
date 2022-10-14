@@ -1,13 +1,13 @@
 pkgname=theming
 pkgver=1
-pkgrel=1
+pkgrel=1.2
 pkgdesc="destop settings for vampire "
 arch=('any')
 license=('GPL3')
 depends=('bash')
 makedepends=('git')
 groups=('vampire')
-source=("$pkgname::git+https://github.com/Vampire-Offical/theming.git")
+source=("$pkgname::git+https://github.com/Vampire-Offical/themeing.git")
 md5sums=('SKIP')
 
 
@@ -23,6 +23,5 @@ package() {
     cp -r gnome-shell $pkgdir/usr/share/
     cp -r themes $pkgdir/usr/share/
     cp -r skel $pkgdir/etc/
-    cp logo.png $pkgdir/usr/share/icons/vampire/
 
 }
